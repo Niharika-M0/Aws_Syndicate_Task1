@@ -7,5 +7,19 @@
     ],
     "resource_type": "iam_role",
     "tags": {}
+  },
+  "task3_api": {
+    "resource_type": "api_gateway",
+    "deploy_stage": "api",
+    "resources": {
+      "/hello": {
+        "GET": {
+          "integration": {
+            "lambda_function": "hello_world_function",
+            "http_method": "POST"
+          }
+        }
+      }
+    }
   }
 }
